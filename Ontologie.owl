@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://jefschaerz/casdar/web"
      versionIRI="http://jefschaerz/casdar/web/v1.0.0">
+    <Prefix name="" IRI="http://jefschaerz/casdar/web"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -28,6 +29,9 @@
         <Class IRI="#PCEndUser"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Printer"/>
     </Declaration>
     <Declaration>
@@ -37,11 +41,137 @@
         <Class IRI="#Software"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="rdf:Person"/>
+        <ObjectProperty IRI="#canInstall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEndUserOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isITContactOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInstalledOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isManagerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTheSuperiorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUserOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#needsSW"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#printsOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#OSName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBuyDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCartridgeNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDepName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDirectPhoneNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFirstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInvNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasKeyNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLaptop"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLastName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOfficeID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProcType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSWName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUserNb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isColor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isVirtual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BiilyBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CAD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DCFileSrv"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dev"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IMP1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IMP2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JeanSairien"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JohnDoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MichelBlanc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Office"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PC1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PC2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vmDC2Print"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vmLinux1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#S&amp;M"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#IT_Admin"/>
-        <Class abbreviatedIRI="rdf:Person"/>
+        <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PC"/>
@@ -49,7 +179,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PCEndUser"/>
-        <Class abbreviatedIRI="rdf:Person"/>
+        <Class IRI="#Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Printer"/>
@@ -63,6 +193,656 @@
         <Class IRI="#Software"/>
         <Class IRI="#IT_Equipment"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#PCEndUser"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#CAD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Server"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Dev"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Printer"/>
+        <NamedIndividual IRI="#IMP1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Printer"/>
+        <NamedIndividual IRI="#IMP2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IT_Admin"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PCEndUser"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IT_Admin"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#Office"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PC"/>
+        <NamedIndividual IRI="#PC1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PC"/>
+        <NamedIndividual IRI="#PC2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Server"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Server"/>
+        <NamedIndividual IRI="#vmLinux1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#S&amp;M"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEndUserOf"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <NamedIndividual IRI="#PC2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsSW"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <NamedIndividual IRI="#Office"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#printsOn"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <NamedIndividual IRI="#IMP2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInstalledOn"/>
+        <NamedIndividual IRI="#IMP1"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isInstalledOn"/>
+        <NamedIndividual IRI="#IMP2"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canInstall"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <NamedIndividual IRI="#CAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isITContactOf"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <NamedIndividual IRI="#S&amp;M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isManagerOf"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEndUserOf"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <NamedIndividual IRI="#PC1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsSW"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <NamedIndividual IRI="#CAD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#printsOn"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <NamedIndividual IRI="#IMP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#canInstall"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <NamedIndividual IRI="#Office"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isITContactOf"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <NamedIndividual IRI="#Dev"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isManagerOf"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstName"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <Literal>Billy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLaptop"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLastName"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <Literal>Bond</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOfficeID"/>
+        <NamedIndividual IRI="#BiilyBond"/>
+        <Literal>A1-12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#CAD"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-05T14:30:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#CAD"/>
+        <Literal>Soft_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSWName"/>
+        <NamedIndividual IRI="#CAD"/>
+        <Literal>SolidWorks</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isVersion"/>
+        <NamedIndividual IRI="#CAD"/>
+        <Literal>2020.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#OSName"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+        <Literal>WindowsServer2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-20T10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+        <Literal>Server_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isVirtual"/>
+        <NamedIndividual IRI="#DCFileSrv"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDepName"/>
+        <NamedIndividual IRI="#Dev"/>
+        <Literal>Development</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUserNb"/>
+        <NamedIndividual IRI="#Dev"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#IMP1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-12T15:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCartridgeNb"/>
+        <NamedIndividual IRI="#IMP1"/>
+        <Literal>CE375</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#IMP1"/>
+        <Literal>IMP_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isColor"/>
+        <NamedIndividual IRI="#IMP1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#IMP2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-05T15:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCartridgeNb"/>
+        <NamedIndividual IRI="#IMP2"/>
+        <Literal>CF410x</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#IMP2"/>
+        <Literal>IMP_002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isColor"/>
+        <NamedIndividual IRI="#IMP2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDirectPhoneNb"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <Literal>360</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstName"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <Literal>Jean</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasKeyNb"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <Literal>1A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLastName"/>
+        <NamedIndividual IRI="#JeanSairien"/>
+        <Literal>Sairien</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstName"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <Literal>John</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLaptop"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLastName"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <Literal>Doe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOfficeID"/>
+        <NamedIndividual IRI="#JohnDoe"/>
+        <Literal>C4-3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDirectPhoneNb"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <Literal>383</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstName"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <Literal>Michel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasKeyNb"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <Literal>2A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLastName"/>
+        <NamedIndividual IRI="#MichelBlanc"/>
+        <Literal>Blanc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#Office"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-05T14:30:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#Office"/>
+        <Literal>Soft_002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSWName"/>
+        <NamedIndividual IRI="#Office"/>
+        <Literal>MSOffice</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isVersion"/>
+        <NamedIndividual IRI="#Office"/>
+        <Literal>2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#PC1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-07T10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#PC1"/>
+        <Literal>PC_001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelNb"/>
+        <NamedIndividual IRI="#PC1"/>
+        <Literal>HPElite8300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProcType"/>
+        <NamedIndividual IRI="#PC1"/>
+        <Literal>i5-5700</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#PC2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-01T10:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#PC2"/>
+        <Literal>PC_002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelNb"/>
+        <NamedIndividual IRI="#PC2"/>
+        <Literal>HPEliteBook850</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProcType"/>
+        <NamedIndividual IRI="#PC2"/>
+        <Literal>i7-7200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#OSName"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+        <Literal>WindowsServer2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-26T12:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+        <Literal>Server_002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isVirtual"/>
+        <NamedIndividual IRI="#vmDC2Print"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#OSName"/>
+        <NamedIndividual IRI="#vmLinux1"/>
+        <Literal>Debian9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBuyDate"/>
+        <NamedIndividual IRI="#vmLinux1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-07T12:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInvNb"/>
+        <NamedIndividual IRI="#vmLinux1"/>
+        <Literal>Server_003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isVirtual"/>
+        <NamedIndividual IRI="#vmLinux1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDepName"/>
+        <NamedIndividual IRI="#S&amp;M"/>
+        <Literal>Sales</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasUserNb"/>
+        <NamedIndividual IRI="#S&amp;M"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isITContactOf"/>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isManagerOf"/>
+        <ObjectProperty IRI="#isUserOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#printsOn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canInstall"/>
+        <Class IRI="#IT_Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEndUserOf"/>
+        <Class IRI="#PCEndUser"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isITContactOf"/>
+        <Class IRI="#IT_Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInstalledOn"/>
+        <Class IRI="#Printer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isManagerOf"/>
+        <Class IRI="#IT_Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTheSuperiorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isUserOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#needsSW"/>
+        <Class IRI="#PCEndUser"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#printsOn"/>
+        <Class IRI="#PCEndUser"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canInstall"/>
+        <Class IRI="#Software"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEndUserOf"/>
+        <Class IRI="#PC"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isITContactOf"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInstalledOn"/>
+        <Class IRI="#Server"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isManagerOf"/>
+        <Class IRI="#Server"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTheSuperiorOf"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isUserOf"/>
+        <Class IRI="#IT_Equipment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#needsSW"/>
+        <Class IRI="#Software"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#printsOn"/>
+        <Class IRI="#Printer"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBuyDate"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#OSName"/>
+        <Class IRI="#Server"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBuyDate"/>
+        <Class IRI="#IT_Equipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCartridgeNb"/>
+        <Class IRI="#Printer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDepName"/>
+        <Class IRI="#Department"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDirectPhoneNb"/>
+        <Class IRI="#IT_Admin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFirstName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInvNb"/>
+        <Class IRI="#IT_Equipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasKeyNb"/>
+        <Class IRI="#IT_Admin"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLaptop"/>
+        <Class IRI="#PCEndUser"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLastName"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelNb"/>
+        <Class IRI="#PC"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOfficeID"/>
+        <Class IRI="#PCEndUser"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProcType"/>
+        <Class IRI="#PC"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSWName"/>
+        <Class IRI="#Software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasUserNb"/>
+        <Class IRI="#Department"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isColor"/>
+        <Class IRI="#Printer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isVersion"/>
+        <Class IRI="#Software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isVirtual"/>
+        <Class IRI="#Server"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#OSName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBuyDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCartridgeNb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDepName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDirectPhoneNb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFirstName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInvNb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasKeyNb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLaptop"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLastName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelNb"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOfficeID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasProcType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSWName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUserNb"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isColor"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isVersion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isVirtual"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
 </Ontology>
 
 
